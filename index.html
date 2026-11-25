@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Estudos · Central de matérias</title>
+  <meta name="description" content="Central de estudos: escolha a matéria e acesse resumos, quiz, simulado, flashcards e discursivas.">
+  <meta name="author" content="Luan Kairo de Souza das Neves">
+  <meta name="theme-color" content="#6e1423">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%236e1423'/%3E%3Cpath fill='%23fff' d='M14.41 10 L17.52 10 L17.52 50.89 L42.49 50.89 L27 34.11 L29.29 32 L49.59 54 L14.41 54 Z M42.57 10 L46.88 10 L20.58 37.32 L20.58 32.84 Z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (() => {
+      let t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      document.documentElement.dataset.theme = t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    })();
+  </script>
+</head>
+<body>
+<header class="header">
+  <nav class="container topbar" aria-label="Principal">
+    <a class="brand" href="./">
+      <svg class="mark" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
+        <rect width="64" height="64" rx="12"/>
+        <path d="M14.41 10 L17.52 10 L17.52 50.89 L42.49 50.89 L27 34.11 L29.29 32 L49.59 54 L14.41 54 Z M42.57 10 L46.88 10 L20.58 37.32 L20.58 32.84 Z"/>
+      </svg>
+      <span>Estudos</span>
+    </a>
+    <ul class="menu" id="nav">
+      <li><a href="#materias">Matérias</a></li>
+      <li><a href="#progresso">Progresso</a></li>
+      <li><a href="#como-estudar">Como estudar</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar modo escuro" title="Alternar tema">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="hero">
+    <p class="eyebrow">Central de estudos · Multivix</p>
+    <h1>O que vamos <em>estudar hoje?</em></h1>
+    <p class="lead">Escolha a matéria. Cada uma tem resumos diretos, quiz com explicação, simulado cronometrado, flashcards e discursivas com resposta-modelo. O seu progresso fica salvo neste navegador e aparece aqui.</p>
+  </div>
+
+  <h2 class="section-title" id="materias">Matérias</h2>
+  <div class="subjects">
+    <article class="card subject" data-key="pdp-progresso-v1" data-total="132">
+      <div class="subject-head">
+        <span class="badge" aria-hidden="true">PDP</span>
+        <div>
+          <h3>Programação Distribuída e Paralela</h3>
+          <p class="muted small">Prof. Jacques Oliveira · slides + Lista 1</p>
+        </div>
+      </div>
+      <ul class="tags">
+        <li class="tag">Sistemas distribuídos</li><li class="tag">Threads e async/await</li><li class="tag">Comunicação</li>
+        <li class="tag">Semáforo e Mutex</li><li class="tag">Monitor</li><li class="tag">Manual/AutoResetEvent</li>
+      </ul>
+      <ul class="counts">
+        <li><b>7</b><span>temas</span></li>
+        <li><b>132</b><span>questões</span></li>
+        <li><b>48</b><span>flashcards</span></li>
+        <li><b>5</b><span>simulações</span></li>
+      </ul>
+      <div class="subject-prog">
+        <div class="bar"><div></div></div>
+        <p class="small muted prog-text">Você ainda não começou.</p>
+      </div>
+      <a class="btn btn-primary go" href="/estudo-programacao-distribuida/">Estudar PDP →</a>
+      <nav class="quick" aria-label="Atalhos de PDP">
+        <a href="/estudo-programacao-distribuida/#resumos">📖 Resumos</a>
+        <a href="/estudo-programacao-distribuida/#quiz">🎯 Quiz</a>
+        <a href="/estudo-programacao-distribuida/#simulado">⏱ Simulado</a>
+        <a href="/estudo-programacao-distribuida/#flash">🃏 Flashcards</a>
+        <a href="/estudo-programacao-distribuida/#discursivas">✍️ Discursivas</a>
+        <a href="/estudo-programacao-distribuida/#lab">🧪 Laboratório</a>
+      </nav>
+    </article>
+
+    <article class="card subject" data-key="adsc-progresso-v1" data-total="166">
+      <div class="subject-head">
+        <span class="badge" aria-hidden="true">ADSC</span>
+        <div>
+          <h3>Avaliação e Desempenho de Sistemas Computacionais</h3>
+          <p class="muted small">Profa. Edna Ramos · apostilas das semanas 1 a 6</p>
+        </div>
+      </div>
+      <ul class="tags">
+        <li class="tag">Métricas</li><li class="tag">Diagnóstico</li><li class="tag">Hardware</li>
+        <li class="tag">Redes multimídia</li><li class="tag">Matriz de decisão</li><li class="tag">Teoria de filas</li>
+      </ul>
+      <ul class="counts">
+        <li><b>6</b><span>semanas</span></li>
+        <li><b>166</b><span>questões</span></li>
+        <li><b>54</b><span>flashcards</span></li>
+        <li><b>55</b><span>discursivas</span></li>
+      </ul>
+      <div class="subject-prog">
+        <div class="bar"><div></div></div>
+        <p class="small muted prog-text">Você ainda não começou.</p>
+      </div>
+      <a class="btn btn-primary go" href="/estudo-avaliacao-desempenho/">Estudar ADSC →</a>
+      <nav class="quick" aria-label="Atalhos de ADSC">
+        <a href="/estudo-avaliacao-desempenho/#resumos">📖 Resumos</a>
+        <a href="/estudo-avaliacao-desempenho/#formulas">🧮 Fórmulas</a>
+        <a href="/estudo-avaliacao-desempenho/#quiz">🎯 Quiz</a>
+        <a href="/estudo-avaliacao-desempenho/#simulado">⏱ Simulado</a>
+        <a href="/estudo-avaliacao-desempenho/#flash">🃏 Flashcards</a>
+        <a href="/estudo-avaliacao-desempenho/#calc">🔢 Calculadoras</a>
+      </nav>
+    </article>
+  </div>
+
+  <h2 class="section-title" id="progresso">Seu progresso geral</h2>
+  <div class="stats">
+    <div class="card stat"><b id="st-total">0</b><span>respondidas</span></div>
+    <div class="card stat"><b id="st-acerto">0%</b><span>de acerto</span></div>
+    <div class="card stat"><b id="st-erradas">0</b><span>para revisar</span></div>
+  </div>
+  <p class="small muted" id="st-dica">Responda algumas questões no quiz de qualquer matéria e o resumo aparece aqui.</p>
+
+  <h2 class="section-title" id="como-estudar">Como estudar em cada matéria</h2>
+  <div class="card">
+    <ol class="steps">
+      <li><b>Resumos</b>: leia na ordem e preste atenção nos quadros ⚠️ <b>Pegadinha</b>.</li>
+      <li><b>Quiz</b>: treine por tema e leia a explicação de cada questão, inclusive das que acertou.</li>
+      <li><b>Flashcards</b>: memorize definições e diferenças rápidas.</li>
+      <li><b>Discursivas</b>: escreva a resposta antes de abrir o modelo e confira os pontos-chave.</li>
+      <li><b>Simulado</b>: faça uma prova cronometrada e repita até passar de 80%.</li>
+      <li>Termine com <b>“Revisar erradas”</b> no Quiz para atacar os pontos fracos.</li>
+    </ol>
+    <div class="callout info"><span class="ct">💡 Dica</span>O progresso fica salvo só neste navegador. Estude sempre no mesmo aparelho para não perder o histórico.</div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="muted">© <span id="ano">2026</span> Luan Kairo de Souza das Neves · Material de estudo pessoal.</p>
+    <p class="muted"><a href="https://luan-k10.github.io/">Portfólio</a> · <a href="https://github.com/luan-k10">GitHub</a> · <a href="https://www.linkedin.com/in/luankairo/">LinkedIn</a></p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
