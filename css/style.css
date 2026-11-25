@@ -281,3 +281,20 @@ h2.section-title { margin-top: 2.25rem; }
 .callout.warn { border-left-color: var(--warn); background: var(--warn-soft); }
 .callout.ok { border-left-color: var(--ok); background: var(--ok-soft); }
 .callout .ct { display: block; font-weight: 700; margin-bottom: .25rem; }
+
+/* ---------- Áreas ---------- */
+.menu a.menu-home { color: var(--muted); font-weight: 600; border: 1px solid var(--border); }
+.menu a.menu-home:hover { color: var(--accent); border-color: var(--accent); background: transparent; }
+.counts.counts-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.quick.quick-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.badge svg { display: block; }
+.area-soon {
+  margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  gap: .35rem; min-height: 12rem; border: 2px dashed var(--border); background: transparent; box-shadow: none;
+}
+.area-soon h3 { margin: 0; font-size: 1.1rem; color: var(--muted); }
+.area-soon p { margin: 0; max-width: 22rem; }
+.soon-icon {
+  display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%;
+  border: 2px dashed var(--border); color: var(--muted); font-size: 1.4rem; font-weight: 700; line-height: 1;
+}

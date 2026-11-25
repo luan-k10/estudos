@@ -25,12 +25,25 @@
     return { feitas: vals.length, certas, erradas: vals.length - certas, total };
   }
 
+  // Matéria: data-key + data-total. Área: data-subjects="chave:total,chave:total".
+  function materiasDo(card) {
+    if (card.dataset.key) return [[card.dataset.key, +card.dataset.total]];
+    return (card.dataset.subjects || "").split(",").filter(Boolean).map(s => {
+      const [k, n] = s.split(":");
+      return [k.trim(), +n];
+    });
+  }
+
   function render() {
     let feitas = 0, certas = 0, erradas = 0;
     $$(".subject").forEach(card => {
-      const p = ler(card.dataset.key, +card.dataset.total);
+      const p = { feitas: 0, certas: 0, erradas: 0, total: 0 };
+      materiasDo(card).forEach(([k, n]) => {
+        const m = ler(k, n);
+        p.feitas += m.feitas; p.certas += m.certas; p.erradas += m.erradas; p.total += m.total;
+      });
       feitas += p.feitas; certas += p.certas; erradas += p.erradas;
-      $(".bar > div", card).style.width = (p.feitas * 100 / p.total) + "%";
+      $(".bar > div", card).style.width = (p.total ? p.feitas * 100 / p.total : 0) + "%";
       $(".prog-text", card).textContent = p.feitas
         ? `${p.feitas}/${p.total} questões respondidas · ${Math.round(p.certas * 100 / p.feitas)}% de acerto`
         : "Você ainda não começou.";
