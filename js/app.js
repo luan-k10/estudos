@@ -59,3 +59,24 @@
   window.addEventListener("pageshow", render);
   window.addEventListener("storage", render);
 })();
+
+// Menu: se não couber numa linha no desktop, passa para 2 linhas; esmaece as bordas quando há itens escondidos.
+(() => {
+  const bar = document.querySelector(".topbar"), menu = bar && bar.querySelector(".menu");
+  if (!menu) return;
+  const wide = matchMedia("(min-width: 1000px)");
+  const fades = () => {
+    const rest = menu.scrollWidth - menu.clientWidth - menu.scrollLeft;
+    menu.classList.toggle("fade-l", menu.scrollLeft > 2);
+    menu.classList.toggle("fade-r", rest > 2);
+  };
+  const fit = () => {
+    bar.classList.remove("stack");
+    if (wide.matches && menu.scrollWidth > menu.clientWidth + 1) bar.classList.add("stack");
+    fades();
+  };
+  menu.addEventListener("scroll", fades, { passive: true });
+  addEventListener("resize", fit);
+  if (document.fonts) document.fonts.ready.then(fit);
+  fit();
+})();

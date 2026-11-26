@@ -363,3 +363,16 @@ h1, h2, h3, h4, b, strong, th { font-weight: 600; }
 /* Logo sem fundo */
 .mark rect { fill: transparent; }
 .mark path { fill: var(--accent); transform-box: fill-box; transform-origin: center; transform: scale(1.3); }
+
+/* ---- Menu: nunca esconder itens (desce de linha se não couber) e indica rolagem ---- */
+@media (min-width: 1000px) {
+  .topbar .menu { justify-content: flex-start; }
+  .topbar .menu > li:first-child { margin-left: auto; }
+  .topbar.stack { grid-template-columns: minmax(0, 1fr) auto; min-height: 0; padding-top: .5rem; }
+  .topbar.stack .menu { grid-column: 1 / -1; grid-row: 2; margin-top: .35rem; padding: 0 0 .45rem; }
+  .topbar.stack .menu > li:first-child { margin-left: 0; }
+  .topbar.stack .theme-toggle { grid-column: 2; }
+}
+.menu.fade-r { -webkit-mask-image: linear-gradient(to left, transparent 0, #000 2.5rem); mask-image: linear-gradient(to left, transparent 0, #000 2.5rem); }
+.menu.fade-l { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 2.5rem); mask-image: linear-gradient(to right, transparent 0, #000 2.5rem); }
+.menu.fade-l.fade-r { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 2.5rem, #000 calc(100% - 2.5rem), transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 2.5rem, #000 calc(100% - 2.5rem), transparent 100%); }
