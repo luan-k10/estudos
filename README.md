@@ -10,6 +10,8 @@ Página inicial para escolher o que estudar. Está organizada por **áreas**; ca
 |---|---|---|
 | [Engenharia](https://luan-k10.github.io/estudos/engenharia/) | Programação Distribuída e Paralela | https://luan-k10.github.io/estudo-programacao-distribuida/ |
 | [Engenharia](https://luan-k10.github.io/estudos/engenharia/) | Avaliação e Desempenho de Sistemas Computacionais | https://luan-k10.github.io/estudo-avaliacao-desempenho/ |
+| [Engenharia](https://luan-k10.github.io/estudos/engenharia/) | Sistemas de Controle I | https://luan-k10.github.io/estudo-sistemas-controle/ |
+| [Engenharia](https://luan-k10.github.io/estudos/engenharia/) | Engenharia de Software | https://luan-k10.github.io/estudo-engenharia-software/ |
 
 ## Como funciona
 
