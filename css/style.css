@@ -359,3 +359,7 @@ h1, h2, h3, h4, b, strong, th { font-weight: 600; }
 .quick a:hover { border-color: var(--gold); color: var(--text); }
 .area-soon { border: 1px dashed var(--line-strong); }
 .soon-icon { border: 1px dashed var(--line-strong); font-weight: 400; }
+
+/* Logo sem fundo */
+.mark rect { fill: transparent; }
+.mark path { fill: var(--accent); transform-box: fill-box; transform-origin: center; transform: scale(1.3); }
